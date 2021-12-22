@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+        <style>
+            .members>li{
+                color:red;
+                text-decoration:underline
+            }
+            #select{
+                font-size:20px;
+            }
+            .deact{
+                text-decoration-style:dotted;
+            }
+            #lecture>li{
+                border:1px solid blue;
+                color:cadetblue
+            }
+            ul,ol{
+                background-color: antiquewhite;
+            }
+            li:hover{
+                color:coral;
+                font-style: italic;
+            }
+            input:focus{
+                background-color:aquamarine;
+            }
+            #px{
+                font-size: 16px;
+            }
+            #rem{
+                font-size: 1rem;
+            }
+            #p1{
+                font-size: 5rem;
+                font-family: 'Black Han Sans', sans-serif;
+                font-weight: normal;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <ol class="members">
+            <li class="deact">SeoDongSu</li>
+            <li class="deact">MinSeungJun</li>
+            <li class="deact">LeeSooYoung</li>
+            <li id="select">LeeSeungJoon</li>
+        </ol>
+        <input>
+        <ul id="lecture">
+            <li>HTML</li>
+            <li>CSS</li>
+                <ol>
+                    <li>selector</li>
+                    <li>declaration</li>
+                </ol>
+            <li>JavaScript</li>
+        </ul>
+        <div id="px">PX</div>
+        <div id="ren">REM</div>
+        <p id="p1">
+            웹은 가장 접근성이 좋고 빠른 수단이다.
+        </p>
+    </body>
+</html>
