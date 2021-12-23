@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                width: 1000px;
+                border : 1px solid black;
+            }
+            header{
+                border-bottom: 2px solid tomato;
+                text-align: center;
+            }
+            footer{
+                border-top: 1px dashed black;
+                text-align: center;
+            }
+            .content{
+                display: flex;
+            }
+            .content nav{
+                border-right: 2px solid black;
+            }
+            .content aside{
+                border-left: 2px solid black;
+            }
+            nav, aside{
+                flex-basis: 150px;
+                flex-shrink: 0;
+            }
+            main{
+                flex-basis: 400px;
+                flex-shrink:1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>스파이더맨</h1>
+            </header>
+            <section class="content">
+                <nav>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </nav>
+                <main>
+                    지능기전 친구들의 웹 스터디
+                </main>
+                <aside>
+                    AD
+                </aside>
+            </section>
+            <footer>
+                <a href="https://www.notion.so/
+                beb0bec0c9f34ed3a22775c2f1211175">Notion</a>
+            </footer>
+        </div>
+    </body>
+</html>

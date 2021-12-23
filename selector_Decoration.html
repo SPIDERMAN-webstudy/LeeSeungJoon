@@ -29,17 +29,31 @@
             input:focus{
                 background-color:aquamarine;
             }
-            #px{
-                font-size: 16px;
+            #small{
+                border:10px solid black;
             }
-            #rem{
-                font-size: 1rem;
+            #large{
+                border:30px solid black;
             }
             #p1{
                 font-size: 5rem;
                 font-family: 'Black Han Sans', sans-serif;
                 font-weight: normal;
+                /* border-width: 14px;
+                border-style: dashed;
+                border-color: aquamarine; */
+                border:14px dashed aquamarine;
+                padding: 10px;
+                width:50%;
                 
+            }
+            .family{
+                border:5px solid tomato
+            }
+            #child{
+                position:absolute;
+                left:100px;
+                top:150px;
             }
         </style>
     </head>
@@ -60,10 +74,16 @@
                 </ol>
             <li>JavaScript</li>
         </ul>
-        <div id="px">PX</div>
-        <div id="ren">REM</div>
+        <div id="small">HELLO</div>
+        <div id="large">HELLO</div>
         <p id="p1">
             웹은 가장 접근성이 좋고 빠른 수단이다.
         </p>
+        <div class = "family" id="parent">
+            parent
+            <div class = "family" id="child">
+                child
+            </div>
+        </div>
     </body>
 </html>
