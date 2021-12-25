@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                border: 1px solid black;
+            }
+            .container{
+                border: 1px dotted black;
+                display: flex;
+                flex-direction: column;
+            }
+            .content{
+                display: flex;
+                flex-direction: row;
+                border: 1px dashed brown
+            }
+            header{
+                text-align: center;
+            }
+            footer{
+                text-align: center;
+            }
+            main{
+                flex-grow:8;
+                flex-shrink: 2;
+                border: 2px solid cornflowerblue;
+            }
+            nav, aside{
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+            @media(max-width:500px){
+                .content{
+                    flex-direction: column;
+                    background-color: bisque;
+                }
+                main{
+                    order:0;
+                }
+                aside{
+                    order:1;
+                }
+                nav{
+                    order:2;
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <header>Header</header>
+        <section class="content">
+            <nav>Navigator</nav>
+            <main>Main: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat provident in numquam voluptates! Quasi consectetur quae id voluptatum reprehenderit, officiis omnis corrupti pariatur. Quas nobis aspernatur vel officiis labore perspiciatis! dolor sit amet consectetur adipisicing elit. Placeat, aperiam?
+            </main>
+            <aside>AD</aside>
+        </section>
+        <Footer>Footer</Footer>
+        </div>
+    </body>
+</html>

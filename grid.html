@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            border: 1px solid black;
+        }
+
+        .container {
+            border: 1px dotted black;
+            display: grid;
+            grid-template-rows: 1fr 5fr 1fr;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 8fr 1fr;
+            border: 1px dashed brown
+        }
+
+        header {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        main {
+            border: 2px solid cornflowerblue;
+            background-image: url('modo.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position-y:-300px ;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <section class="content">
+            <nav>Navigator</nav>
+            <main>Main: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat provident in numquam
+                voluptates! Quasi consectetur quae id voluptatum reprehenderit, officiis omnis corrupti pariatur. Quas
+                nobis aspernatur vel officiis labore perspiciatis! dolor sit amet consectetur adipisicing elit. Placeat,
+                aperiam?
+            </main>
+            <aside>AD</aside>
+        </section>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
