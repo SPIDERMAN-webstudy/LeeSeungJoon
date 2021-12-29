@@ -11,19 +11,25 @@ function saveToDos(item) {
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
+  let liId = parseInt(li.id);
+  console.log(liId);
   li.remove();
-  const idx = toDos.indexOf(li.value);
-  toDos.splice(idx, 1);
+  toDos = toDos.filter(function (item) {
+    return item.key !== liId;
+  });
+  console.log(toDos);
   saveToDos(toDos);
 }
 
-function paintToDo(newTodo) {
+function paintToDo(newTodoObj) {
   const list = document.createElement("li");
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodoObj.text;
+  list.id = newTodoObj.key;
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
+
   list.appendChild(span);
   list.appendChild(button);
   toDoList.appendChild(list);
@@ -31,11 +37,15 @@ function paintToDo(newTodo) {
 
 function handleToDo(event) {
   event.preventDefault();
-  const toDo = toDoInput.value;
+  const toDoObj = {
+    text: toDoInput.value,
+    key: Date.now(),
+  };
   toDoInput.value = "";
-  toDos.push(toDo);
+
+  toDos.push(toDoObj);
   saveToDos(toDos);
-  paintToDo(toDo);
+  paintToDo(toDoObj);
 }
 
 function loadToDos() {
