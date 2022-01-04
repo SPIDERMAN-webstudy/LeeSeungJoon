@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 100px;
+      }
+      #counter span {
+        font-size: 50px;
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
+      #counter button {
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+  <script type="text/babel">
+    function Btn({ banana, clicked, fontSize = 18 }) {
+      return (
+        <button
+          onClick={clicked}
+          style={{
+            backgroundColor: "tomato",
+            fontSize,
+            color: "white",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: 10,
+          }}
+        >
+          {banana}
+        </button>
+      );
+    }
+
+    Btn.propTypes = {
+      banana: PropTypes.string.isRequired,
+      fontSize: PropTypes.number,
+    };
+
+    const MemorizedBtn = React.memo(Btn);
+
+    function App() {
+      const [value, setValue] = React.useState("Save chages");
+      const changeValue = () => setValue("Revert change");
+      return (
+        <div>
+          <MemorizedBtn banana={value} clicked={changeValue} fontSize={5} />
+          <MemorizedBtn banana="Button 2" />
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
