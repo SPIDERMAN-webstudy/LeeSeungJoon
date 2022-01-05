@@ -1,7 +1,6 @@
 import Button from "./Button";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
-
 function App() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
@@ -12,41 +11,44 @@ function App() {
   const [refresh, setRefresh] = useState(false);
   const Changed = (event) => {
     setValue(event.target.value);
+    //setMoney(value);
+    setMoney(event.target.value);
     console.log("changed");
   };
 
-  const Submitted = (event) => {
-    event.preventDefault();
-    setMoney(value);
-  };
+  // const Submitted = (event) => {
+  //   event.preventDefault();
+  //   setMoney(value);
+  // };
   const Selected = (event) => {
     setIndex(parseInt(event.target.value));
     setSelectedBool(true);
   };
   useEffect(() => {
-    console.log("loading");
+    console.log("Fetching");
     setLoading(true);
     fetch("https://api.coinpaprika.com/v1/tickers")
       .then((response) => response.json())
       .then((json) => setCoins(json.slice(0, 2000)));
-    console.log("loaded");
+    console.log("Loaded");
     setLoading(false);
   }, [refresh]);
   return (
-    <div>
+    <div className={styles.center}>
       <h1>How many Coins you can buy {loading ? "" : `(${coins.length})`}</h1>
       {loading ? (
         <strong>Loading...</strong>
       ) : (
         <div>
-          <form onSubmit={Submitted}>
+          {/* <form onSubmit={Submitted}> */}
+          <form>
             <input
               onChange={Changed}
               value={parseInt(value)}
               type="number"
               placeholder="Your money"
             ></input>
-            <button>Enter</button>
+            {/* <button>Enter</button> */}
           </form>
           <select onChange={Selected}>
             <option>--Select your coin--</option>
