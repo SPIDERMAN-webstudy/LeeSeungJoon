@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/LeeSeungJoon/react-movieapp/static/js/main.a17e7269.js",
-    "index.html": "/LeeSeungJoon/react-movieapp/index.html",
-    "main.a17e7269.js.map": "/LeeSeungJoon/react-movieapp/static/js/main.a17e7269.js.map"
+    "main.js": "/LeeSeungJoon/static/js/main.3864cc52.js",
+    "index.html": "/LeeSeungJoon/index.html",
+    "main.3864cc52.js.map": "/LeeSeungJoon/static/js/main.3864cc52.js.map"
   },
   "entrypoints": [
-    "static/js/main.a17e7269.js"
+    "static/js/main.3864cc52.js"
   ]
 }
