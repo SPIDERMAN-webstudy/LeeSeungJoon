@@ -1,0 +1,90 @@
+.Home {
+  display: flex;
+  color: white;
+}
+.domain {
+  padding: 0px;
+  margin: 0px;
+  bottom: 6px;
+  margin-right: 20%;
+  margin-left: 20px;
+  position: relative;
+  display: inline;
+}
+.form {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: tomato;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 5px 15px rgb(29, 29, 29);
+}
+.selector {
+  margin: auto;
+}
+.form span {
+  font-size: 20px;
+}
+.resultbox {
+  width: 100%;
+  margin: auto;
+  top: 50%;
+  position: absolute;
+}
+.noresult {
+  text-align: center;
+}
+.select {
+  height: 30px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  background-color: tomato;
+  padding: 3px;
+}
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.next {
+  position: relative;
+  height: 50px;
+}
+
+.nextBtn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 1500px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 770px) {
+  .form {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .selector select,
+  .selector span {
+    font-size: 15px;
+  }
+  .domain {
+    margin: 0px;
+  }
+}
