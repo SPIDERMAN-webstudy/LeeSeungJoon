@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/LeeSeungJoon/static/css/main.a24a76a6.css",
-    "main.js": "/LeeSeungJoon/static/js/main.562c1c1b.js",
+    "main.css": "/LeeSeungJoon/static/css/main.fb334e82.css",
+    "main.js": "/LeeSeungJoon/static/js/main.aa898555.js",
     "index.html": "/LeeSeungJoon/index.html",
-    "main.a24a76a6.css.map": "/LeeSeungJoon/static/css/main.a24a76a6.css.map",
-    "main.562c1c1b.js.map": "/LeeSeungJoon/static/js/main.562c1c1b.js.map"
+    "main.fb334e82.css.map": "/LeeSeungJoon/static/css/main.fb334e82.css.map",
+    "main.aa898555.js.map": "/LeeSeungJoon/static/js/main.aa898555.js.map"
   },
   "entrypoints": [
-    "static/css/main.a24a76a6.css",
-    "static/js/main.562c1c1b.js"
+    "static/css/main.fb334e82.css",
+    "static/js/main.aa898555.js"
   ]
 }
