@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import style from "./Home.module.css";
 import Loading from "../components/Loading";
-import { useMediaQuery } from "react-responsive";
 
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [genre, setGenre] = useState("");
   const [rating, setRating] = useState();
-  const [sortBy, setSortBy] = useState("");
+  const [sortBy, setSortBy] = useState("download_count");
   const [last, setLast] = useState(false);
   const [page, setPage] = useState(1);
 
@@ -132,10 +131,10 @@ function Home() {
                   name="sort_by"
                   value={sortBy}
                 >
+                  <option value="download_count">다운로드 수</option>
                   <option value="like_count">추천순</option>
                   <option value="title">이름순</option>
                   <option value="year">최신순</option>
-                  <option value="download_count">다운로드 수</option>
                   <option value="date_added">추가된 날짜순</option>
                 </select>
               </span>

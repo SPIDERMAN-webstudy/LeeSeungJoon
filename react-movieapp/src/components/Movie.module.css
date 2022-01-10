@@ -38,6 +38,6 @@
   .card {
     flex-direction: column;
     align-items: center;
-    margin-top: 85px;
+    margin-top: 30px;
   }
 }
