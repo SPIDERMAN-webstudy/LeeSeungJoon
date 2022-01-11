@@ -72,6 +72,9 @@
 }
 
 @media (max-width: 770px) {
+  .backImg {
+    object-fit: cover;
+  }
   .form {
     flex-direction: column;
     padding-bottom: 10px;
