@@ -1,0 +1,26 @@
+.card {
+  margin: auto;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 2rem;
+  width: 50%;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding-bottom: 15px;
+}
+
+.card form * {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.card form button {
+  width: fit-content;
+}

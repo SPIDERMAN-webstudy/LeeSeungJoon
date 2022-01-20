@@ -1,0 +1,8 @@
+.container {
+  border-radius: 10px;
+}
+.container h1 {
+  background-color: rgb(119, 21, 114);
+  color: white;
+  overflow: hidden;
+}
