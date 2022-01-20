@@ -6,7 +6,7 @@ import ErrorModal from "./component/UI/ErrorModal";
 function App() {
   const [userData, setUserData] = useState([]);
   const [invalid, setInvalid] = useState(false);
-  let warningTitle = "Warning";
+  let warningTitle = "Invalid Input";
   const [warningText, setWarningText] = useState("");
   const inputHandler = (data) => {
     console.log(data);
@@ -14,7 +14,7 @@ function App() {
       setInvalid(true);
       setWarningText("You didn't write Information");
     } else {
-      if (parseInt(data.age) < 0) {
+      if (parseInt(data.age) <= 0) {
         setInvalid(true);
         setWarningText("Age should be larger than 0");
       } else {
