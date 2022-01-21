@@ -23,8 +23,8 @@ function App() {
       }
     }
   };
-  const setOkay = (data) => {
-    setInvalid(data);
+  const setOkay = () => {
+    setInvalid(false);
   };
   return (
     <div className="App">
