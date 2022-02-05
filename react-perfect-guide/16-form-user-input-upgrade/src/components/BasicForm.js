@@ -2,33 +2,30 @@ import { useState } from "react";
 import useInput2 from "../hooks/use-input2";
 const BasicForm = (props) => {
   const {
-    setInput: setFirstNameInput,
     input: firstNameInput,
     inputValid: fisrtNameInputValid,
-    setTouched: setFirstNameTouched,
     touched: firstNameTouched,
     inputChangeHandler: firstNameChangeHandler,
     inputBlurHandler: firstNameInputBlurHandler,
+    reset: firstNameReset,
   } = useInput2((input) => input.trim() !== "");
 
   const {
-    setInput: setLastNameInput,
     input: lastNameInput,
     inputValid: lastNameInputValid,
-    setTouched: setLastNameTouched,
     touched: lastNameTouched,
     inputChangeHandler: lastNameChangeHandler,
     inputBlurHandler: lastNameInputBlurHandler,
+    reset: lastNameReset,
   } = useInput2((input) => input.trim() !== "");
 
   const {
-    setInput: setEmailInput,
     input: emailInput,
     inputValid: emailInputValid,
-    setTouched: setEmailTouched,
     touched: emailTouched,
     inputChangeHandler: emailChangeHandler,
     inputBlurHandler: emailInputBlurHandler,
+    reset: emailReset,
   } = useInput2((input) => input.includes("@"));
 
   let formIsValid =
@@ -41,13 +38,9 @@ const BasicForm = (props) => {
     console.log(firstNameInput);
     console.log(lastNameInput);
     console.log(emailInput);
-
-    setFirstNameInput("");
-    setLastNameInput("");
-    setEmailInput("");
-    setFirstNameTouched(false);
-    setLastNameTouched(false);
-    setEmailTouched(false);
+    firstNameReset();
+    lastNameReset();
+    emailReset();
   };
 
   const firstNameInvalidClass =
