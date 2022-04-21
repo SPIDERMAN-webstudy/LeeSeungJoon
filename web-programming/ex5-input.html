@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+  </head>
+  <body>
+    <form name="example">
+      <fieldset>
+        <legend>예제</legend>
+        <label>text<input type="text" placeholder="placeholder" /></label><br />
+        <label>password<input type="password" required /></label><br />
+        <label>search<input type="search" autofocus /></label><br />
+        <label>url<input type="url" value="http://" /></label><br />
+        <label>email<input type="email" /></label><br />
+        <label>tel<input type="tel" /></label><br />
+        <label>radio1<input type="radio" name="yes" /></label
+        ><label>radio2<input type="radio" name="yes" /></label><br />
+        <label>checkbox<input type="checkbox" /></label><br />
+        <label
+          >number<input
+            type="number"
+            min="0"
+            max="100"
+            step="5"
+            value="0" /></label
+        ><br />
+        <label
+          >range<input
+            type="range"
+            min="-10"
+            max="10"
+            step="5"
+            value="0"
+            onchange="document.getElementById('range').innerText = this.value" /></label
+        ><span id="range">0</span><br />
+        <label>date<input type="date" /></label><br />
+        <label>month<input type="month" /></label><br />
+        <label>week<input type="week" /></label><br />
+        <label>time<input type="time" /></label><br />
+        <label>datetime<input type="datetime" /></label><br />
+        <label>datetime-local<input type="datetime-local" /></label><br />
+        <label>submit<input type="submit" value="제출" /></label><br />
+        <label>reset<input type="reset" value="리셋" /></label><br />
+        <label>image<input type="image" alt="사진없음" src="image.png" /></label
+        ><br />
+        <label>button<input type="button" value="버튼" /></label><br />
+        <label>file<input type="file" /></label><br />
+        <label>hidden<input type="hidden" name="hidden" value="hidden" /></label
+        ><br />
+        <textarea id="memo" cols="10" rows="5">textarea</textarea><br />
+        <label for="select">select / optgroup / option</label><br />
+        <select id="select" size="3" multiple>
+          <optgroup label="커피(Coffee)">
+            <option value="americano">아메리카노</option>
+            <option value="caffe latte">카페라떼</option>
+            <option value="espresso">에스프레소</option>
+          </optgroup>
+          <optgroup label="티(Tea)">
+            <option value="earl grey">얼그레이티</option>
+            <option value="jasmine">자스민티</option>
+          </optgroup>
+        </select>
+        <br />
+        <label for="datalist">datalist / option</label><br />
+        <input type="text" list="cafe" />
+        <datalist id="cafe">
+          <option value="americano">아메리카노</option>
+          <option value="caffe latte">카페라떼</option>
+          <option value="espresso">에스프레소</option>
+          <option value="earl grey">얼그레이티</option>
+          <option value="jasmine">자스민티</option></datalist
+        ><br />
+        <label
+          >color<input
+            type="color"
+            value=""
+            onchange="document.body.style.backgroundColor=this.value" /></label
+        ><br />
+      </fieldset>
+    </form>
+  </body>
+</html>
