@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>훌훌 털어버려!!</title>
+    <style>
+        fieldset{
+            text-align: center;
+            width: 70%;
+        }
+        body{
+            width: fit-content;
+            margin:auto;
+            background-color: skyblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+    <script>
+        function send(){
+            alert("이제 활짝 웃어요!")
+        }
+    </script>
+  </head>
+  <body>
+    <h1>~~속상한 일을 적고 훌훌 털어버리세요~~</h1>
+    <form name="diary">
+      <fieldset>
+        <label><input type="text" placeholder="그 사람의 이름" /></label><br />
+        <textarea id="memo" cols="80" rows="6">그 사람이 한 일을 적어주세요.</textarea><br />
+        <input type="submit" value="털어버리기!!" onclick="send()">
+      </fieldset>
+    </body>
+</html>

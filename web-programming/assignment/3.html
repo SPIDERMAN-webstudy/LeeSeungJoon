@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도시락</title>
+    <style>
+      table {
+        border: 5px solid salmon;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        z-index: 1;
+        box-shadow: 10px 10px 15px;
+      }
+      #lid {
+        position: absolute;
+        border: 5px solid salmon;
+        background-color: rgb(255, 177, 108);
+        width: 300px;
+        height: 140px;
+        text-align: center;
+        top: 100px;
+        left: 100px;
+        z-index: 2;
+        transition: 1s;
+        font-style: italic;
+      }
+      #lid:hover {
+        transform: scale(1.1);
+        transform: translate(150px, -20px);
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>먹을 수 없는 본 도시락</h1>
+    <div id="lid">맛있게 드시고 건강하세요. [열기]</div>
+    <div id="box">
+      <table onmouseenter="" border="1">
+        <thead>
+          <tr>
+            <th>메인</th>
+            <th>반찬</th>
+            <th>국</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>갈비찜</td>
+            <td>멸치볶음</td>
+            <td>콩나물국</td>
+          </tr>
+          <tr>
+            <td>오리로스</td>
+            <td>김치볶음</td>
+            <td>들깨탕</td>
+          </tr>
+          <tr>
+            <td>삼겹살구이</td>
+            <td>상추</td>
+            <td>된장찌개</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>맛있는 메인</th>
+            <th>정겨운 반찬</th>
+            <th>따듯한 국</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

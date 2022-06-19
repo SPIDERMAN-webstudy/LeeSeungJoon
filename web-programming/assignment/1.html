@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bread Party</title>
+    <style>
+      span {
+        font-size: large;
+        color: brown;
+        font-weight: 800;
+      }
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        text-align: center;
+        background-color: burlywood;
+      }
+      h1 {
+      }
+      ol {
+        display: inline;
+        width: 30%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>빵! 최고야! : Bread Party에 오신것을 환영합니다.</h1>
+    <hr />
+    <span>당신의 성별은?</span><br />
+    <label>남성<input type="radio" name="gender" /></label>
+    <label>여성<input type="radio" name="gender" /></label><br /><br />
+    <span>좋아하는 빵은?</span><br />
+    <label>식빵<input type="checkbox" /></label>
+    <label>커피번<input type="checkbox" /></label>
+    <label>바게뜨<input type="checkbox" /></label>
+    <label>파이<input type="checkbox" /></label>
+    <label>타르트<input type="checkbox" /></label><br /><br />
+    <span>빵당 Bread Party 상임위원</span>
+    <ul>
+      <li>에그 타르트</li>
+      <li>햄 치즈 토스트</li>
+      <li>크림 치즈 모카번</li>
+      <li>호두 파이</li>
+      <li>필라델피아 크림치즈 바른 바게뜨</li>
+    </ul>
+    <br /><br />
+    <span>신규 당원 가입을 위한 빵가루 사진 첨부</span><br />
+    <input
+      type="file"
+      id="chooseFile"
+      name="chooseFile"
+      accept="image/*"
+      onchange="loadFile(this)"
+    />
+  </body>
+</html>

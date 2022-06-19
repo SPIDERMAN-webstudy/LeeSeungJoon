@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Today</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: darkslateblue;
+        color: white;
+      }
+      a {
+        color: beige;
+        size: 15px;
+      }
+      a:visited {
+        color: rgb(196, 246, 246);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>현재 날씨입니다.</h1>
+    <div id="weather">
+      <span style="font-size: 30px"></span>
+      <span></span>
+    </div>
+    <h1>오늘의 뉴스를 확인해보세요.</h1>
+    <a href="https://news.naver.com/" target="_blank">네이버 뉴스</a><br />
+    <a href="https://news.daum.net" target="_blank">다음 뉴스</a><br />
+    <a href="https://news.yahoo.com/" target="_blank">야후 뉴스</a><br />
+    <script>
+      const API_KEY = "790e7700eb9d18dd9afe131498bf3416";
+
+      function successGeo(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const weatherContainer = document.getElementById("weather");
+            const name = data.name;
+            const temp = data.main.temp;
+            const sky = data.weather[0].main;
+            weatherContainer.querySelector("span:nth-child(1)").innerText =
+              temp + "℃";
+            weatherContainer.querySelector("span:nth-child(2)").innerText = sky;
+          });
+      }
+      function failGeo() {
+        alert("날씨 정보를 위해 위치 확인을 허용해주세요.");
+      }
+      navigator.geolocation.getCurrentPosition(successGeo, failGeo);
+    </script>
+  </body>
+</html>
